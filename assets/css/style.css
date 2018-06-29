@@ -1,3 +1,33 @@
 body {
     background: url(../images/abstract.jpg);
 }
+
+.container {
+    background-color: white;
+    opacity: .75;
+    text-align: center;
+    border: 2%;
+    padding: 10%;
+    margin-top: 15%;
+    height: 75%;
+    width: 75%;
+
+}
+
+button {
+    margin-top: 3%;
+    width: 20%;
+    height: 75%;
+    background-color: grey;
+   
+}
+
+#start {
+    text-align: center;
+    padding: auto;;
+    display: inline-block;
+    margin-top: 10%;
+    
+}
+
+
