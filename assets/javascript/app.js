@@ -14,7 +14,7 @@ $(document).ready(function () {
         if (timeLeft === 0) {
             clearTimeout(timerID);
         } else {
-            countTime.innerHTML = "Time Remaining: " + timeLeft;
+            countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + "</h3");
             timeLeft--;
         }
     }
