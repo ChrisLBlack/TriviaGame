@@ -25,6 +25,7 @@ button {
 #start {
     text-align: center;
     display: inline-block;
-    margin-top: 10%;
+    margin: auto;
+    width: 20%;
     
 }

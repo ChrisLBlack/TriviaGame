@@ -6,13 +6,13 @@ $(document).ready(function () {
     document.getElementById("start").onclick = function () {
         countDown();
         console.log(timeLeft);
-        var timerID = setInterval(countDown, 1000);
+        setInterval(countDown, 1000);
        
     }
 
     function countDown() {
         if (timeLeft === 0) {
-            clearTimeout(timerID);
+            
         } else {
             countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + "</h3");
             timeLeft--;
