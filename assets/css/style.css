@@ -16,7 +16,7 @@ body {
 
 button {
     margin-top: 3%;
-    width: 20%;
+    width: auto;
     height: 75%;
     background-color: grey;
    
@@ -24,10 +24,7 @@ button {
 
 #start {
     text-align: center;
-    padding: auto;;
     display: inline-block;
     margin-top: 10%;
     
 }
-
-
