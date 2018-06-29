@@ -1,12 +1,12 @@
 $(document).ready(function () {
     var timeLeft = 30;
     var countTime = document.getElementById("countdown");
-    var timerID = setInterval(countDown, 1000);
+    // var timerID = setInterval(countDown, 1000);
 
     document.getElementById("start").onclick = function () {
-        setInterval(timeLeft, 1000);
         countDown();
         console.log(timeLeft);
+        var timerID = setInterval(countDown, 1000);
        
     }
 
