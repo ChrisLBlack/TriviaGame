@@ -1,19 +1,27 @@
 $(document).ready(function () {
-    // var timeLeft = 0;
-
-    // HTMLButtonElement.addEventListener("click", setTimeout(timeStart, 1000 *30));
+    var timeLeft = 30;
+    var countTime = document.getElementById("countdown");
+    var timerID = setInterval(countDown, 1000);
 
     document.getElementById("start").onclick = function () {
-        setTimeout(1000 * 30);
-        console.log("it works");
+        setInterval(timeLeft, 1000);
+        countDown();
+        console.log(timeLeft);
+       
     }
 
-    // function timeStart (){
-    //     timeLeft = 
-    //     $("#start").html("<h2>Time Remaining: " + timeLeft);
-    // }
+    function countDown() {
+        if (timeLeft === 0) {
+            clearTimeout(timerID);
+        } else {
+            countTime.innerHTML = "Time Remaining: " + timeLeft;
+            timeLeft--;
+        }
+    }
+   
 
-    // $("#start").on("click", timeStart());
+
+ ;
 
 
 
