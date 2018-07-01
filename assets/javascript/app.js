@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     function questions() {
         for (i = 0; i < triviaQuestions.length && triviaAnswers.length; i++) {
-            $(".questions").append(("<h2>" + triviaQuestions[i]) + "</h3>" + "</br>" + ("<ul>" + "<input type='radio'>" + triviaAnswers[i]));
+            $(".questions").append(("<h4>" + triviaQuestions[i]) + "</h4>" + "</br>" + ("<ul>" + "<input type='radio'>" + triviaAnswers[i]));
         }
     }
 
