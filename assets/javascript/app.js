@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    var timeLeft = 30;
+    var timeLeft = 60;
     var countTime = document.getElementById("countdown");
 
     document.getElementById("start").onclick = function () {
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     function questions() {
         for (i = 0; i < triviaQuestions.length && triviaAnswers.length; i++) {
-            $(".questions").append(("<ul>" + triviaQuestions[i]) + "</br>" + ("<input type='radio'>" + triviaAnswers[i]));
+            $(".questions").append(("<h2>" + triviaQuestions[i]) + "</h3>" + "</br>" + ("<ul>" + "<input type='radio'>" + triviaAnswers[i]));
         }
     }
 
