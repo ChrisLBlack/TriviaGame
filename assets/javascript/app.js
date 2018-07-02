@@ -12,6 +12,7 @@ $(document).ready(function () {
 
     function countDown() {
         if (timeLeft === 0) {
+            //allDone();
 
         } else {
             countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + "</h3");
@@ -19,21 +20,52 @@ $(document).ready(function () {
         }
     }
 
-    var triviaQuestions = ["Which is the only member of Pink Floyd to play on all of their albums?", "What is Syd Barretts real name?", "Which are the three animals featured on Pink Floyd's 'Animals' album?", "Who was the original lead guitarist for Pink Floyd?",
-        "What song off Pink Floyd's first album didn't have any lyrics?", "When was Roger Waters born?", "Who uttered the only lyrics for Pink Floyd's 'One of These Days'?"
+    var triviaQuestions = [
+        "Which is the only member of Pink Floyd to play on all of their albums?", "What is Syd Barretts real name?", "Which are the three animals featured on Pink Floyd's 'Animals' album?",
+        "Who was the original lead guitarist for Pink Floyd?", "What song off Pink Floyd's first album didn't have any lyrics?", "When was Roger Waters born?",
+        "Who uttered the only lyrics for Pink Floyd's 'One of These Days'?"
     ];
-    var triviaAnswers = ["this is an answer", "this is an answer", "and this is an answer", "these are answers too", "these as well, yep these too"]
+
+    var triviaAnswers = [{
+
+            question: "what does this do?",
+            a: "one",
+            b: "two",
+            c: "three",
+            d: "four"
+        },
+        {
+            question: "And what does this do?",
+            a: "five",
+            b: "six",
+            c: "seven",
+            d: "eight"
+
+        },
+    ]
+    
+
 
     function questions() {
+
         for (i = 0; i < triviaQuestions.length && triviaAnswers.length; i++) {
-            $(".questions").append(("<h4>" + triviaQuestions[i]) + "</h4>" + "</br>" + ("<ul>" + "<input type='radio'>" + triviaAnswers[i]));
+            $(".questions").append(("<h4>" + triviaQuestions[i]) + "</h4>" + "</br>" + ("<span>" + "<input type='radio'> " + triviaAnswers[i].a + "<input type='radio'> " + "<span>" + triviaAnswers[i].b + "<span>" + "<input type='radio'> " + triviaAnswers[i].c + "<span>" + "<input type='radio'>" + triviaAnswers[i].d));
+
         }
     }
 
+    // $(".questions").append("<h4>" + toString.triviaAnswers); 
 
-    //add in trivia questions and buttons
 
-    //add in if questions are right or wrong.  This may be able to be done with one function
+
+
+
+    //this will be function to count answers (right or wrong) and add grade to page
+
+    // function allDone(){
+
+    // }
+
 
 
 
