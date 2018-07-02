@@ -42,8 +42,52 @@ $(document).ready(function () {
             d: "eight"
 
         },
+        {
+            question: "And what does this do?",
+            a: "nine",
+            b: "ten",
+            c: "eleven",
+            d: "twelve"
+
+        },
+
+        {
+            question: "And what does this do?",
+            a: "13",
+            b: "14",
+            c: "15",
+            d: "16"
+
+        },
+        {
+            question: "And what does this do?",
+            a: "17",
+            b: "18",
+            c: "19",
+            d: "20"
+
+        },
+        {
+            question: "And what does this do?",
+            a: "21",
+            b: "22",
+            c: "23",
+            d: "24"
+
+        },
+        {
+            question: "And what does this do?",
+            a: "25",
+            b: "26",
+            c: "27",
+            d: "28"
+
+        },
+
+
+
     ]
-    
+
 
 
     function questions() {
@@ -53,11 +97,6 @@ $(document).ready(function () {
 
         }
     }
-
-    // $(".questions").append("<h4>" + toString.triviaAnswers); 
-
-
-
 
 
     //this will be function to count answers (right or wrong) and add grade to page
