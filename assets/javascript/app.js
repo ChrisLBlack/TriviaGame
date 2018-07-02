@@ -20,22 +20,16 @@ $(document).ready(function () {
         }
     }
 
-    var triviaQuestions = [
-        "Which is the only member of Pink Floyd to play on all of their albums?", "What is Syd Barretts real name?", "Which are the three animals featured on Pink Floyd's 'Animals' album?",
-        "Who was the original lead guitarist for Pink Floyd?", "What song off Pink Floyd's first album didn't have any lyrics?", "When was Roger Waters born?",
-        "Who uttered the only lyrics for Pink Floyd's 'One of These Days'?"
-    ];
-
     var triviaAnswers = [{
 
-            question: "what does this do?",
-            a: "one",
-            b: "two",
-            c: "three",
+            question: "Which is the only member of Pink Floyd to play on all of their albums?",
+            a: " one   ",
+            b: "two  ",
+            c: "three  ",
             d: "four"
         },
         {
-            question: "And what does this do?",
+            question: "What is Syd Barretts real name?",
             a: "five",
             b: "six",
             c: "seven",
@@ -43,7 +37,7 @@ $(document).ready(function () {
 
         },
         {
-            question: "And what does this do?",
+            question: "Which are the three animals featured on Pink Floyd's 'Animals' album?",
             a: "nine",
             b: "ten",
             c: "eleven",
@@ -52,7 +46,7 @@ $(document).ready(function () {
         },
 
         {
-            question: "And what does this do?",
+            question: "Who was the original lead guitarist for Pink Floyd?",
             a: "13",
             b: "14",
             c: "15",
@@ -60,7 +54,7 @@ $(document).ready(function () {
 
         },
         {
-            question: "And what does this do?",
+            question: "What song off Pink Floyd's first album didn't have any lyrics?",
             a: "17",
             b: "18",
             c: "19",
@@ -68,7 +62,7 @@ $(document).ready(function () {
 
         },
         {
-            question: "And what does this do?",
+            question: "When was Roger Waters born?",
             a: "21",
             b: "22",
             c: "23",
@@ -76,7 +70,7 @@ $(document).ready(function () {
 
         },
         {
-            question: "And what does this do?",
+            question: "Who uttered the only lyrics for Pink Floyd's 'One of These Days'?",
             a: "25",
             b: "26",
             c: "27",
@@ -88,13 +82,10 @@ $(document).ready(function () {
 
     ]
 
-
-
     function questions() {
 
-        for (i = 0; i < triviaQuestions.length && triviaAnswers.length; i++) {
-            $(".questions").append(("<h4>" + triviaQuestions[i]) + "</h4>" + "</br>" + ("<span>" + "<input type='radio'> " + triviaAnswers[i].a + "<input type='radio'> " + "<span>" + triviaAnswers[i].b + "<span>" + "<input type='radio'> " + triviaAnswers[i].c + "<span>" + "<input type='radio'>" + triviaAnswers[i].d));
-
+        for (i = 0; i < triviaAnswers.length; i++) {
+            $(".questions").append("<h4>" + triviaAnswers[i].question + "</h4>" +  "</br>" + "<span>" + "<input type='radio'>" + triviaAnswers[i].a + "<input type='radio'> " + "<span>" + triviaAnswers[i].b + "<span>" + "<input type='radio'> " + triviaAnswers[i].c + "<span>" + "<input type='radio'>" + triviaAnswers[i].d)
         }
     }
 
