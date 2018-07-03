@@ -106,7 +106,7 @@ $(document).ready(function () {
             $(".questions").append("<h4>" + triviaAnswers[i].question + "</h4>" + "</br>" + "<span>" + triviaAnswers[i].a + "<span>" + triviaAnswers[i].b + "<span>" + triviaAnswers[i].c + "<span>" + triviaAnswers[i].d + "</br>" + "</br>")
 
         }
-        $("#submit").append("<button class='btn border border-dark start'><p class='align-middle flex'>Submit</p></button");
+        $("#submit").append("<button class='btn border border-dark start'><p class='align-middle flex'><strong>Submit</strong></p></button");
 
 
     }
