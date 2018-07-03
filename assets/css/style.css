@@ -29,3 +29,7 @@ button {
     width: 20%;
     
 }
+
+input[type="radio"]{
+    margin: 0 10px 0 10px;
+  }
