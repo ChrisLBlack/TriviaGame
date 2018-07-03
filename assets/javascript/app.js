@@ -4,7 +4,7 @@ $(document).ready(function () {
     var timeLeft = 60;
     var countTime = document.getElementById("countdown");
 
-    document.getElementById("start").onclick = function () {
+    document.getElementById("letsGo").onclick = function () {
         countDown();
         setInterval(countDown, 1000);
         questions();
@@ -26,7 +26,7 @@ $(document).ready(function () {
             a: "<input type='radio' name='one'>Richard Wright",
             b: "<input type='radio' name='one'>David Gilmour",
             c: "<input type='radio' name='one'>Nick Mason",
-            d: "<input type='radio' name='one'>Roger Waters", 
+            d: "<input type='radio' name='one'>Roger Waters",
             correct: "a"
         },
         {
@@ -35,7 +35,7 @@ $(document).ready(function () {
             b: "<input type='radio' name='two'>Scotty",
             c: "<input type='radio' name='two'>Sercy",
             d: "<input type='radio' name='two'>Seamus",
-            correct:"d"
+            correct: "d"
 
         },
         {
@@ -98,12 +98,15 @@ $(document).ready(function () {
 
     ]
 
+    
+
     function questions() {
 
         for (i = 0; i < triviaAnswers.length; i++) {
-            $(".questions").append("<h4>" + triviaAnswers[i].question + "</h4>" +  "</br>" + "<span>" + triviaAnswers[i].a + "<span>" + triviaAnswers[i].b + "<span>" + triviaAnswers[i].c + "<span>" + triviaAnswers[i].d + "</br>" + "</br>")
-    
+            $(".questions").append("<h4>" + triviaAnswers[i].question + "</h4>" + "</br>" + "<span>" + triviaAnswers[i].a + "<span>" + triviaAnswers[i].b + "<span>" + triviaAnswers[i].c + "<span>" + triviaAnswers[i].d + "</br>" + "</br>")
+
         }
+        $("#submit").append("<button class='btn border border-dark start'><p class='align-middle flex'>Submit</p></button");
 
 
     }
