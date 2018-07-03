@@ -101,7 +101,7 @@ $(document).ready(function () {
     function questions() {
 
         for (i = 0; i < triviaAnswers.length; i++) {
-            $(".questions").append("<h4>" + triviaAnswers[i].question + "</h4>" +  "</br>" + "<span>" + triviaAnswers[i].a + "<span>" + triviaAnswers[i].b + "<span>" + triviaAnswers[i].c + "<span>" + triviaAnswers[i].d)
+            $(".questions").append("<h4>" + triviaAnswers[i].question + "</h4>" +  "</br>" + "<span>" + triviaAnswers[i].a + "<span>" + triviaAnswers[i].b + "<span>" + triviaAnswers[i].c + "<span>" + triviaAnswers[i].d + "</br>" + "</br>")
     
         }
 
