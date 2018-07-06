@@ -1,21 +1,26 @@
 $(document).ready(function () {
 
 
-    var timeLeft = 60;
+    var timeLeft = 120;
     var countTime = document.getElementById("countdown");
 
     document.getElementById("letsGo").onclick = function () {
         countDown();
         setInterval(countDown, 1000);
         questions();
+
+
     }
+
+
+
 
     function countDown() {
         if (timeLeft === 0) {
             //allDone();
 
         } else {
-            countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + "</h3");
+            countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + " Seconds Left!" + "</h3");
             timeLeft--;
         }
     }
@@ -23,10 +28,10 @@ $(document).ready(function () {
     var triviaAnswers = [{
 
             question: "Which is the only member of Pink Floyd to play on all of their albums?",
-            a: "<input type='radio' name='one'>Richard Wright",
-            b: "<input type='radio' name='one'>David Gilmour",
-            c: "<input type='radio' name='one'>Nick Mason",
-            d: "<input type='radio' name='one'>Roger Waters",
+            a: "<input type='radio' name='one' value='1' class='one'>Richard Wright",
+            b: "<input type='radio' name='one' value='0'>David Gilmour",
+            c: "<input type='radio' name='one' value='0'>Nick Mason",
+            d: "<input type='radio' name='one' value='0'>Roger Waters",
             correct: "a"
         },
         {
@@ -98,7 +103,8 @@ $(document).ready(function () {
 
     ]
 
-    
+
+
 
     function questions() {
 
@@ -106,10 +112,40 @@ $(document).ready(function () {
             $(".questions").append("<h4>" + triviaAnswers[i].question + "</h4>" + "</br>" + "<span>" + triviaAnswers[i].a + "<span>" + triviaAnswers[i].b + "<span>" + triviaAnswers[i].c + "<span>" + triviaAnswers[i].d + "</br>" + "</br>")
 
         }
-        $("#submit").append("<button class='btn border border-dark start'><p class='align-middle flex'><strong>Submit</strong></p></button");
-
+        $("#submit").append("<button class='btn border border-dark start'><p class='align-middle flex id='submit'><strong>Submit</strong></p></button");
+        $('input[type=radio').click(function(){
+            // alert(this.value);
+            if (this.value == 1){
+                console.log("right!");
+            }else {
+                console.log("wrong")
+            }
+        })
 
     }
+
+     document.getElementById("submit").onclick = function allDone(){
+         console.log('it works');
+
+    // $("#one").click = function () {
+    //         if ($("#one").checked) {
+    //             console.log("this works")
+    //             correctGuess++;
+        
+    //         } else {
+    //             console.log("wut?")
+    //             wrongGuess++;
+    //         }
+    //     }
+
+     }
+    var correctGuess = 0;
+    var wrongGuess = 0;
+
+
+    
+
+
 
 
     // function checker () {
