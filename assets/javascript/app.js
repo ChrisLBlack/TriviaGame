@@ -36,66 +36,66 @@ $(document).ready(function () {
         },
         {
             question: "What was the name of the dog included on the Pink Floyd album 'Meddle'?",
-            a: "<input type='radio' name='two'>Syd",
-            b: "<input type='radio' name='two'>Scotty",
-            c: "<input type='radio' name='two'>Sercy",
-            d: "<input type='radio' name='two'>Seamus",
+            a: "<input type='radio' name='two' value='0>Syd",
+            b: "<input type='radio' name='two' value='0'>Scotty",
+            c: "<input type='radio' name='two' value='0'>Sercy",
+            d: "<input type='radio' name='two' value='1'>Seamus",
             correct: "d"
 
         },
         {
             question: "Which are the three animals featured on Pink Floyd's 'Animals' album?",
-            a: "<input type='radio' name='three'>Dogs, Snakes, Pigs",
-            b: "<input type='radio' name='three'>Snakes, Cattle, Cats",
-            c: "<input type='radio' name='three'>Dogs, Cats, Sheep ",
-            d: "<input type='radio' name='three'>Dogs, Pigs, Sheep ",
+            a: "<input type='radio' name='three' value='0'>Dogs, Snakes, Pigs",
+            b: "<input type='radio' name='three' value='0'>Snakes, Cattle, Cats",
+            c: "<input type='radio' name='three' value='0'>Dogs, Cats, Sheep ",
+            d: "<input type='radio' name='three' value='1'>Dogs, Pigs, Sheep ",
             correct: "d"
 
         },
 
         {
             question: "Who was the original lead guitarist for Pink Floyd?",
-            a: "<input type='radio' name='four'>Bill Bailey",
-            b: "<input type='radio' name='four'>Mickey Lee Soule",
-            c: "<input type='radio' name='four'>David Gilmour",
-            d: "<input type='radio' name='four'>Syd Barrett",
+            a: "<input type='radio' name='four' value='0'>Bill Bailey",
+            b: "<input type='radio' name='four' value='0'>Mickey Lee Soule",
+            c: "<input type='radio' name='four' value='0'>David Gilmour",
+            d: "<input type='radio' name='four' value='1'>Syd Barrett",
             correct: "d"
 
         },
         {
             question: "What song off Pink Floyd's first album didn't have any lyrics?",
-            a: "<input type='radio' name='five'>Astronomy Domine",
-            b: "<input type='radio' name='five'>Interstellar Overdrive",
-            c: "<input type='radio' name='five'>Gnome",
-            d: "<input type='radio' name='five'>Wish You Were Here",
+            a: "<input type='radio' name='five' value='0'>Astronomy Domine",
+            b: "<input type='radio' name='five' value='0'>Interstellar Overdrive",
+            c: "<input type='radio' name='five' value='1'>Gnome",
+            d: "<input type='radio' name='five' value='0'>Wish You Were Here",
             correct: "b"
 
         },
         {
             question: "When was Roger Waters born?",
-            a: "<input type='radio' name='six'>1943",
-            b: "<input type='radio' name='six'>1939",
-            c: "<input type='radio' name='six'>1945",
-            d: "<input type='radio' name='six'>1948",
+            a: "<input type='radio' name='six' value='1'>1943",
+            b: "<input type='radio' name='six' value='0'>1939",
+            c: "<input type='radio' name='six' value='0'>1945",
+            d: "<input type='radio' name='six' value='0'>1948",
             correct: "a"
 
         },
         {
             question: "Who uttered the only lyrics for Pink Floyd's 'One of These Days'?",
-            a: "<input type='radio' name='seven'>Roger Waters",
-            b: "<input type='radio' name='seven'>David Gilmour",
-            c: "<input type='radio' name='seven'>Nick Mason",
-            d: "<input type='radio' name='seven'>Rick Wright",
+            a: "<input type='radio' name='seven' value='0'>Roger Waters",
+            b: "<input type='radio' name='seven' value='1'>David Gilmour",
+            c: "<input type='radio' name='seven' value='0'>Nick Mason",
+            d: "<input type='radio' name='seven' value='0'>Rick Wright",
             correct: "b"
 
         },
         {
 
             question: "In what year was the movei 'Pink Floyd The Wall' made?",
-            a: "<input type='radio' name='eight'> 1982",
-            b: "<input type='radio' name='eight'>1973",
-            c: "<input type='radio' name='eight'>1994",
-            d: "<input type='radio' name='eight'>1079",
+            a: "<input type='radio' name='eight' value='1'> 1982",
+            b: "<input type='radio' name='eight' value='0'>1973",
+            c: "<input type='radio' name='eight' value='0'>1994",
+            d: "<input type='radio' name='eight' value='0'>1079",
             correct: "a"
         }
 
