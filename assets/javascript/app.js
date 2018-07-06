@@ -4,20 +4,21 @@ $(document).ready(function () {
     var timeLeft = 120;
     var countTime = document.getElementById("countdown");
 
+    var correctGuess = 0;
+    var wrongGuess = 0;
+    var notAnswered = 0;
+
+    //when start button is clicked
     document.getElementById("letsGo").onclick = function () {
         countDown();
         setInterval(countDown, 1000);
         questions();
 
-
     }
-
-
-
 
     function countDown() {
         if (timeLeft === 0) {
-            //allDone();
+            // allDone();
 
         } else {
             countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + " Seconds Left!" + "</h3");
@@ -103,9 +104,6 @@ $(document).ready(function () {
 
     ]
 
-
-
-
     function questions() {
 
         for (i = 0; i < triviaAnswers.length; i++) {
@@ -113,61 +111,49 @@ $(document).ready(function () {
 
         }
         $("#submit").append("<button class='btn border border-dark start'><p class='align-middle flex id='submit'><strong>Submit</strong></p></button");
-        $('input[type=radio').click(function(){
-            // alert(this.value);
-            // if (this.value == 1){
-                if (this.checked && this.value == 1){
-                console.log("right!");
-                correctGuess++;
-            }else if (this.checked && this.value == 0) {
-                console.log("wrong....")
-                wrongGuess++;
-            }else if (!this.checked){
-                console.log("not answered")
-                notAnswered++;
-            }
-        })
+        
+        //THIS CODE WORKS IT JUST HAS BUGSSSSSSSS
+        // $('input[type=radio]').click(function(){
+        //     // alert(this.value);
+        //     // if (this.value == 1){
+        //     if (this.checked && this.value == 1){
+        //         console.log("right!");
+        //         correctGuess++;
+        //     }else if (this.checked && this.value == 0) {
+        //         console.log("wrong....")
+        //         wrongGuess++;
+        //     }else if (!this.checked){
+        //         console.log("not answered")
+        //         notAnswered++;
+        //     }
+        // })
 
     }
 
-     document.getElementById("submit").onclick = function allDone(){
-         console.log('it works');
-         timeLeft = 0;
-         countTime.innerHTML = ("<h4>Time's Up!")
-         $(".questions").html("<h3>" + "Correct Answers: " + correctGuess + "</br>" + "<h3>" + "Incorrect Answers: " + wrongGuess + "</br>" + "Unanswered: " + notAnswered )
+    //checks answers to see if they're right, wrong, or unanswered
+    function checker() {
+        if ($(':radio:checked') && $(':radio'. value == 0)) {
+            console.log("right!");
+            correctGuess++;}
+        // } else if (this.checked && this.value == 0) {
+        //     console.log("wrong....")
+        //     wrongGuess++;
+        // } else if (!this.checked) {
+        //     console.log("not answered")
+        //     notAnswered++;
+        // }
 
-     }
-    var correctGuess = 0;
-    var wrongGuess = 0;
-    var notAnswered = 0;
+    }
 
+    //when submit button is clicked
+    document.getElementById("submit").onclick = function allDone() {
+        checker();
+        timeLeft = 0;
+        //lists the answers on the DOM
+        countTime.innerHTML = ("<h4>Time's Up!")
+        $(".questions").html("<h3>" + "Correct Answers: " + correctGuess + "</br>" + "<h3>" + "Incorrect Answers: " + wrongGuess + "</br>" + "Unanswered: " + notAnswered);
 
-    
-
-
-
-
-    // function checker () {
-    //     if ((triviaAnswers[0].a).checked == true){
-    //         console.log("you've checked a thing");
-    //     }else {
-    //         console.log("it no worky");
-    //     }
-    // }
-    // checker();
-
-
-    //this will be function to count answers (right or wrong) and add grade to page
-
-    // function allDone(){
-
-    // }
-
-
-
-
-
-
+    }
 
 
 });
