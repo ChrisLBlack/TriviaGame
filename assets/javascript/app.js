@@ -36,7 +36,7 @@ $(document).ready(function () {
         },
         {
             question: "What was the name of the dog included on the Pink Floyd album 'Meddle'?",
-            a: "<input type='radio' name='two' value='0>Syd",
+            a: "<input type='radio' name='two' value='0'>Syd",
             b: "<input type='radio' name='two' value='0'>Scotty",
             c: "<input type='radio' name='two' value='0'>Sercy",
             d: "<input type='radio' name='two' value='1'>Seamus",
@@ -115,10 +115,16 @@ $(document).ready(function () {
         $("#submit").append("<button class='btn border border-dark start'><p class='align-middle flex id='submit'><strong>Submit</strong></p></button");
         $('input[type=radio').click(function(){
             // alert(this.value);
-            if (this.value == 1){
+            // if (this.value == 1){
+                if (this.checked && this.value == 1){
                 console.log("right!");
-            }else {
-                console.log("wrong")
+                correctGuess++;
+            }else if (this.checked && this.value == 0) {
+                console.log("wrong....")
+                wrongGuess++;
+            }else if (!this.checked){
+                console.log("not answered")
+                notAnswered++;
             }
         })
 
@@ -126,21 +132,14 @@ $(document).ready(function () {
 
      document.getElementById("submit").onclick = function allDone(){
          console.log('it works');
-
-    // $("#one").click = function () {
-    //         if ($("#one").checked) {
-    //             console.log("this works")
-    //             correctGuess++;
-        
-    //         } else {
-    //             console.log("wut?")
-    //             wrongGuess++;
-    //         }
-    //     }
+         timeLeft = 0;
+         countTime.innerHTML = ("<h4>Time's Up!")
+         $(".questions").html("<h3>" + "Correct Answers: " + correctGuess + "</br>" + "<h3>" + "Incorrect Answers: " + wrongGuess + "</br>" + "Unanswered: " + notAnswered )
 
      }
     var correctGuess = 0;
     var wrongGuess = 0;
+    var notAnswered = 0;
 
 
     
