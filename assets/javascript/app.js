@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    var timeLeft = 120;
+    var timeLeft = 5;
     var countTime = document.getElementById("countdown");
 
     var correctGuess = 0;
@@ -15,16 +15,23 @@ $(document).ready(function () {
         questions();
 
     }
+
+    
     //Starts the clock and adds the time to the page
     function countDown() {
         if (timeLeft === 0) {
-            // allDone();
+            allDone();
+            timeLeft = -1;
 
-        } else {
+        } else if (timeLeft > 0){
             countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + " Seconds Left!" + "</h3");
             timeLeft--;
+        } else if (timeLeft === -1){
+            countTime.innerHTML = ("<h2>Time's Up!")
         }
+        return
     }
+    
     // All of the trivia answers and questions in radio button forms to be loaded to the page
     var triviaAnswers = [{
 
@@ -124,7 +131,7 @@ $(document).ready(function () {
             wrongGuess++;
         } else {
             notAnswered++;
-          
+
         }
         //-------------------Checking Second Guess--------------
 
@@ -136,7 +143,8 @@ $(document).ready(function () {
             wrongGuess++;
         } else {
             notAnswered++;
-        }
+    
+        } 
         //-----------------Checking Third Guess--------------
         var threeChecked = $('#three').is(':checked');
         var threeNotChecked = $('.notThree').is(':checked');
@@ -205,15 +213,20 @@ $(document).ready(function () {
     }
 
     //when submit button is clicked
-    document.getElementById("submit").onclick = function allDone() {
+     document.getElementById("submit").onclick = function addEmUp(){
+         timeLeft = 0;
+         allDone();
+     }
+
+    function allDone(){
         checker();
-        timeLeft = 0;
+        countTime.innerHTML = ("<h2>Time's Up!")
         //lists the answers on the DOM
-        countTime.innerHTML = ("<h4>Time's Up!")
         $(".questions").html("<h3>" + "Correct Answers: " + correctGuess + "</br>" + "<h3>" + "Incorrect Answers: " + wrongGuess + "</br>" + "Unanswered: " + notAnswered);
 
         $("#submit").remove();
+        clearTimeout()
+        return
+    
     }
-
-
 });
