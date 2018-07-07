@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    var timeLeft = 5;
+    var timeLeft = 90;
     var countTime = document.getElementById("countdown");
 
     var correctGuess = 0;
