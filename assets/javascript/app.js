@@ -20,8 +20,8 @@ $(document).ready(function () {
     //Starts the clock and adds the time to the page
     function countDown() {
         if (timeLeft === 0) {
-            allDone();
             timeLeft = -1;
+            allDone();
 
         } else if (timeLeft > 0){
             countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + " Seconds Left!" + "</h3");
