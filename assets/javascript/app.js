@@ -19,15 +19,15 @@ $(document).ready(function () {
     
     //Starts the clock and adds the time to the page
     function countDown() {
-        if (timeLeft === 0) {
-            timeLeft = -1;
-            allDone();
+        if (timeLeft === -1) {
+            countTime.innerHTML = ("<h2>Time's Up!")
 
         } else if (timeLeft > 0){
             countTime.innerHTML = ("<h3>Time Remaining: " + timeLeft + " Seconds Left!" + "</h3");
             timeLeft--;
-        } else if (timeLeft === -1){
-            countTime.innerHTML = ("<h2>Time's Up!")
+        } else if (timeLeft === 0){
+            timeLeft = -1;
+            allDone();
         }
         return
     }
@@ -214,7 +214,7 @@ $(document).ready(function () {
 
     //when submit button is clicked
      document.getElementById("submit").onclick = function addEmUp(){
-         timeLeft = 0;
+         timeLeft = -1;
          allDone();
      }
 
